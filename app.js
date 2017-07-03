@@ -7,8 +7,11 @@ const bodyParser   = require('body-parser');
 const layouts      = require('express-ejs-layouts');
 const mongoose     = require('mongoose');
 
+// import the "dotenv" package and load variables from the ".env" file
+require("dotenv").config();
 
-mongoose.connect('mongodb://localhost/miamitech');
+
+mongoose.connect(process.env.MONGODB_URI);
 
 const app = express();
 
