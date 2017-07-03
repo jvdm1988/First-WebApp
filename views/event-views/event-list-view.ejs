@@ -1,0 +1,13 @@
+<h2> Miami Tech Events </h2>
+
+<ul class="eventList">
+  <% eventsAndStuff.forEach((oneEvent) => { %>
+    <li>
+      <img src=" <%= oneEvent.photoUrl %>">
+      <h3> <%= oneEvent.name %> </h3>
+      <p> <%= oneEvent.date %> </p>
+      <a href="<%= oneEvent._id/details %>"> view details </a>
+      <br>
+    </li>
+  <%  }) %>
+</ul>

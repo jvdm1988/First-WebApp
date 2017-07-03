@@ -1,0 +1,13 @@
+<h2> Miami Tech Workshops </h2>
+
+<ul class="workshopList">
+  <% workshopsAndStuff.forEach((oneWorkshop) => { %>
+    <li>
+      <img src=" <%= oneWorkshop.photoUrl %> ">
+      <h3> <%= oneWorkshop.name %> </h3>
+      <p> <%= oneWorkshop.date %> </p>
+      <a href="<%= oneWorkshop._id/details %> "> view details </a>
+      <br>
+    </li>
+    <% }) %> 
+</ul>
