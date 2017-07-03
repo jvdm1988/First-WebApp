@@ -58,7 +58,7 @@ router.post("/events", (req, res, next) => {
     name: req.body.eventName,
     location: req.body.eventLocation,
     date: req.body.eventDate,
-    photoUrl: req.body.eventPhotoUrl,
+    // photoUrl: req.body.eventPhotoUrl,
     description: req.body.eventDescription
   });
 
@@ -84,13 +84,59 @@ router.post("/events", (req, res, next) => {
 
 
 // ROUTE TO EDIT EVENT VIEW --------------------------------------------
+// STEP #1 of form submission of editing an Event
+router.get("/events/:myId/edit", (req, res, next) => {
+  EventModel.findById(
+    req.params.myId,
+    (err, eventFromDb) => {
+      if (err) {
+        next(err);
+        return;
+      }
+      res.locals.eventDetails = eventFromDb;
+      res.render("event-views/edit-event-views.ejs");
+    }
+  );
+});
 
+// STEP #2 of form submissionediting an Event
+router.post("/events/:myId/update", (req, res, next) => {
+  EventModel.findByIdAndUpdate(
+    req.params.myId, //1st arg -> id of document to update
+    { //2nd arg -> object of fields to update
+      category: req.body.eventCategory,
+      name: req.body.eventName,
+      location: req.body.eventLocation,
+      date: req.body.eventDate,
+      photoUrl: req.body.eventPhotoUrl,
+      description: req.body.eventDescription
+    },
+    (err, eventFromDb) => { //3rd arg -> callback
+      if (err) {
+        next(err);
+        return;
+      }
+      res.redirect("/events/" + eventFromDb._id);
+    }
+  );
+});
 // END ROUTE TO EDIT EVENT VIEW ----------------------------------------
 
 
 
 // ROUTE TO DELETE EVENT VIEW ------------------------------------------
-
+router.post("/events/:myId/delete", (req, res, next) => {
+  EventModel.findByIdAndRemove(
+    req.params.myId,
+    (err, eventFromDb) => {
+      if (err) {
+        next(err);
+        return;
+      }
+      res.redirect("/events");
+    }
+  );
+});
 // END ROUTE TO DELETE EVENT VIEW --------------------------------------
 
 

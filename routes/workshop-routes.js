@@ -23,13 +23,14 @@ router.get("/workshops", (req, res, next) => {
 // ROUTE TO WORKSHOPS DETAILS VIEW -----------------------------------------
 router.get("/workshops/:workshopId/details", (req, res, next) => {
   WorkshopModel.findById(
-    req.params.eventId,
-    (err, eventFromDb) => {
+    req.params.workshopId,
+    (err, workshopFromDb) => {
       if (err) {
         next(err);
         return;
       }
       res.locals.workshopDetails = workshopFromDb;
+
       res.render("workshop-views/workshop-detail-view.ejs");
     }
   );
@@ -58,7 +59,7 @@ router.post("/workshops", (req, res, next) => {
     name: req.body.workshopName,
     location: req.body.workshopLocation,
     date: req.body.workshopDate,
-    photoUrl: req.body.workshopPhotoUrl,
+    // photoUrl: req.body.workshopPhotoUrl,
     description: req.body.workshopDescription
   });
 
@@ -84,13 +85,59 @@ router.post("/workshops", (req, res, next) => {
 
 
 // ROUTE TO EDIT WORKSHOP VIEW --------------------------------------------
+// STEP #1 of form submission of editing an Workshop
+router.get("/workshops/:myId/edit", (req, res, next) => {
+  WorkshopModel.findById(
+    req.params.myId,
+    (err, workshopFromDb) => {
+      if (err) {
+        next(err);
+        return;
+      }
+      res.locals.workshopDetails = workshopFromDb;
+      res.render("workshop-views/edit-workshop-views.ejs");
+    }
+  );
+});
 
+// STEP #2 of form submission editing an Workshop
+router.post("/workshops/:myId/update", (req, res, next) => {
+  WorkshopModel.findByIdAndUpdate(
+    req.params.myId, //1st arg -> id of document to update
+    { //2nd arg -> object of fields to update
+      category: req.body.workshopCategory,
+      name: req.body.workshopName,
+      location: req.body.workshopLocation,
+      date: req.body.workshopDate,
+      photoUrl: req.body.workshopPhotoUrl,
+      description: req.body.workshopDescription
+    },
+    (err, workshopFromDb) => { //3rd arg -> callback
+      if (err) {
+        next(err);
+        return;
+      }
+      res.redirect("/workshops/" + workshopFromDb._id);
+    }
+  );
+});
 // END ROUTE TO EDIT WORKSHOP VIEW ----------------------------------------
 
 
 
 // ROUTE TO DELETE WORKSHOP VIEW ------------------------------------------
-
+router.post("/workshops/:myId/delete", (req, res, next) => {
+  WorkshopModel.findByIdAndRemove(
+    req.params.myId,
+    (err, workshopFromDb) => {
+      if (err) {
+        next(err);
+        return;
+      }
+      res.redirect("/workshops");
+    }
+  );
+});
 // END ROUTE TO DELETE WORKSHOP VIEW --------------------------------------
 
 

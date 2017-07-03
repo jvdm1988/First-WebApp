@@ -1,3 +1,29 @@
-<!-- MULTER file upload - input type is "file"
+<h2> Add an Event </h2>
 
-form method action needs also: enctype="multipart/form-data"> -->
+<form method="post" action="/events" >
+  <label for="event-category-input">  Category </label>
+  <input id="event-category-input" type="text" name="eventCategory">
+  <br>
+
+  <label for="event-name-input"> Name of Event </label>
+  <input id="event-name-input" type="text" step="0.10" name="eventName">
+  <br>
+
+  <label for="event-location-input"> Location </label>
+  <input id="event-location-input" type="text" name="eventLocation">
+  <br>
+
+  <label for="event-date-input"> Date of Event </label>
+  <input id="event-date-input" type="date" name="eventDate">
+  <br>
+
+  <label for="event-image-input"> Image Url </label>
+  <!-- <input id="event-image-input" name="eventUrl" type="file"> -->
+  <br>
+
+  <label for="event-description-input"> Description </label>
+  <textarea id="event-description-input" name="eventDescription"></textarea>
+  <br>
+
+  <button> Save Your Event </button>
+</form>

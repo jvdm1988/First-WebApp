@@ -1,0 +1,29 @@
+<h2> Edit Workshop </h2>
+
+<form method="post" action="/workshops/<%=workshopDetails._id %>/update" enctype="multipart/form-data">
+  <label for="workshop-category-input">  Category </label>
+  <input id="workshop-category-input" type="text" name="workshopCategory" value="<%= workshopDetails.category %>">
+  <br>
+
+  <label for="workshop-name-input"> Name of Workshop </label>
+  <input id="workshop-name-input" type="text" step="0.10" name="workshopName" value="<%= workshopDetails.name %>">
+  <br>
+
+  <label for="workshop-location-input"> Location </label>
+  <input id="workshop-location-input" type="text" name="workshopLocation" value="<%= workshopDetails.location %>">
+  <br>
+
+  <label for="workshop-date-input"> Date of Workshop </label>
+  <input id="workshop-date-input" name="workshopDate" type="date" value="<%= workshopDetails.date %>">
+  <br>
+
+  <label for="workshop-image-input"> Image Url </label>
+  <input id="workshop-image-input" name="workshopUrl" type="file" value="<%= workshopDetails.imageUrl %>">
+  <br>
+
+  <label for="workshop-description-input"> Description </label>
+  <textarea id="workshop-description-input" name="workshopDescription" value="<%= workshopDetails.description %>"</textarea>
+  <br>
+
+  <button> Save Your Changes </button>
+</form>

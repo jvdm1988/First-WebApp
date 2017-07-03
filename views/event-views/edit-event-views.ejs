@@ -1,0 +1,29 @@
+<h2> Edit Event </h2>
+
+<form method="post" action="/events/<%=eventDetails._id %>/update" enctype="multipart/form-data">
+  <label for="event-category-input">  Category </label>
+  <input id="event-category-input" type="text" name="eventCategory" value="<%= eventDetails.category %>">
+  <br>
+
+  <label for="event-name-input"> Name of Event </label>
+  <input id="event-name-input" type="text" step="0.10" name="eventName" value="<%= eventDetails.name %>">
+  <br>
+
+  <label for="event-location-input"> Location </label>
+  <input id="event-location-input" type="text" name="eventLocation" value="<%= eventDetails.location %>">
+  <br>
+
+  <label for="event-date-input"> Date of Event </label>
+  <input id="event-date-input" name="eventDate" type="date" value="<%= eventDetails.date %>">
+  <br>
+
+  <label for="event-image-input"> Image Url </label>
+  <input id="event-image-input" name="eventUrl" type="file" value="<%= eventDetails.imageUrl %>">
+  <br>
+
+  <label for="event-description-input"> Description </label>
+  <textarea id="event-description-input" name="eventDescription" value="<%= eventDetails.description %>"></textarea>
+  <br>
+
+  <button> Save Your Changes </button>
+</form>
