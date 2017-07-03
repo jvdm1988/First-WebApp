@@ -1,12 +1,32 @@
+<div class="event-details-page">
+
 <h2> Event Details </h2>
 
+<h3> <%= eventDetails.name %> </h3>
 
 
+<p> <%= eventDetails.date %> </p>
 
+<p> <%= eventDetails.description %> </p>
 
-
-
+<div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="..." alt="...">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Media heading</h4>
+    ...
+  </div>
+</div>
 
 
 <a href="/events/<%=eventDetails._id%>/edit"> Edit Event </a>
 <br>
+
+
+<a href="/events/<%=eventDetails._id%>/delete"> Delete Event </a>
+<br>
+
+</div>

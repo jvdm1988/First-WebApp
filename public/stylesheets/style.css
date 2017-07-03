@@ -6,6 +6,7 @@ body {
   /*background-image: url("/images/background1.jpg");*/
   font-family: "Raleway";
   height: 100%;
+  background-color: #f7f7f7;
 }
 
 
@@ -137,4 +138,9 @@ body {
   height: 60px;
   margin-top: -40px;
   background-color: white;
+}
+
+.event-details-page {
+  background-color: #eff2f1;
+  height: 100%;
 }
