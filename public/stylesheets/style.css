@@ -1,3 +1,4 @@
+/* DEFAULT STYLING ----------------------------------------------------*/
 html {
   height: 100%;
 }
@@ -8,17 +9,10 @@ body {
   height: 100%;
   background-color: #f7f7f7;
 }
+/* END DEFAULT STYLING -----------------------------------------------*/
 
 
-.homebackground {
-  height: 100%;
-  width: 100%;
-  margin-top: -20px;
-  background-image: url("/images/background1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
+/* OVERALL LAYOUT STYLING --------------------------------------------*/
 .page-header {
   margin-top: -20px;
   height: 100px;
@@ -43,7 +37,7 @@ body {
 
 }
 
-.navbar li {
+.homelink {
   display: inline;
   padding: 40px;
   float: right;
@@ -62,7 +56,18 @@ body {
 .btn-group {
   float: right;
   padding-right: 30px;
+  padding-left: 87px;
   margin-top: -65px;
+}
+/* HOMEPAGE STYLING --------------------------------------------------*/
+
+.homebackground {
+  height: 100%;
+  width: 100%;
+  margin-top: -20px;
+  background-image: url("/images/background1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .eventcircle {
@@ -134,12 +139,6 @@ body {
   text-decoration: none;
 }
 
-.panel-body{
-  height: 60px;
-  margin-top: -40px;
-  background-color: white;
-}
-
 .event-details-page {
   background-color: #eff2f1;
   height: 100%;
@@ -169,3 +168,76 @@ body {
   height: 120px;
   width: 120px;
 }*/
+
+/* EVENT & WORKSHOP DETAILS VIEW STYLING ------------------------------------*/
+
+.event-details-page {
+  background-image: url("/images/background2.jpg");
+  font-family: "Nothing You Could Do", cursive;
+  color: #588466;
+  font-weight: bold;
+  font-size: 50px;
+  height: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding-top: 70px;
+}
+
+.edit-delete-link {
+  text-align: center;
+  border: 1px solid #588466;
+  border-radius: 70px;
+  padding: 20px;
+  width: 210px;
+  font-size: 22px;
+  display: inline-block;
+  background-color: white;
+  color: #588466;
+  margin-left: 570px;
+}
+
+.details-box {
+  /*position: absolute;*/
+  bottom: 60px;
+  left: 250px;
+  background-color: #77a894;
+  opacity: 0.9;
+  width: 800px;
+  height: 650px;
+  text-align: center;
+  border: 5px solid #588466;
+  -moz-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    overflow:hidden;
+    -webkit-box-shadow:0 0 4em rgb(4,6,5);
+    -moz-box-shadow:0 0 3em rgb(6,7,8);
+    box-shadow:0 0 1em rgb(5,9,2);
+  margin: 0 auto;
+}
+
+.details-content {
+  width: 600px;
+  margin: 0 auto;
+  font-family: "Raleway";
+  font-size: 24px;
+  color: black;
+}
+
+.details-content h3 {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.media img {
+  height: 200px;
+  width: 250px;
+}
+
+/* END EVENT & WORKSHOP DETAILS VIEW STYLING ------------------------------------*/
+
+
+/* FOOTER STYLING -------------------------------------------------------*/

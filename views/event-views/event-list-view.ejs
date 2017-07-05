@@ -6,17 +6,18 @@
   </div>
 </div>
 
-
-<div class="media" "eventList">
-  <% eventsAndStuff.forEach((oneEvent) => { %>
+<% eventsAndStuff.forEach((oneEvent) => { %>
+<div class="media eventList">
   <div class="media-left media-middle">
+
       <img class="media-object" src=" <%= oneEvent.photoUrl %>">
     </a>
   </div>
   <div class="media-body">
-    <h4 class="media-heading"> <%= oneEvent.name %></h4>
-    <p> <%= oneEvent.date %> </p>
+    <h3 class="media-heading"> <%= oneEvent.name %></h3>
+    <p> <i><%= prettyDate(oneEvent.date) %></i> </p>
     <a href="/events/<%= oneEvent._id%>/details"> view details </a>
   </div>
-    <%  }) %>
+
 </div>
+<%  }) %>

@@ -10,6 +10,7 @@ const session      = require("express-session");
 const passport     = require("passport");
 
 
+
 // import the "dotenv" package and load variables from the ".env" file
 require("dotenv").config();
 
@@ -27,6 +28,21 @@ app.set('view engine', 'ejs');
 
 // default value for title local
 app.locals.title = 'Express - Generated with IronGenerator';
+
+const dateFormat = require("dateformat");
+
+app.locals.prettyDate =(myDate) => {
+  return dateFormat(myDate, "dddd - mmmm dd yyyy - HH:MM");
+};
+
+app.locals.pTagify = (myStr) => {
+  const listOfParagraphs = myStr.split('\n');
+
+  const withPTags = listOfParagraphs.map((oneline) => {
+    return "<p>" + oneline + "</p>";
+  });
+  return withPTags.join("\n");
+};
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));

@@ -125,7 +125,7 @@ router.post("/events/:myId/update", (req, res, next) => {
 
 
 // ROUTE TO DELETE EVENT VIEW ------------------------------------------
-router.post("/events/:myId/delete", (req, res, next) => {
+router.get("/events/:myId/delete", (req, res, next) => {
   EventModel.findByIdAndRemove(
     req.params.myId,
     (err, eventFromDb) => {

@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>
-    <%= title %>
+    MiamiTech-social
+    <!-- <%= title %> -->
   </title>
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
@@ -29,11 +30,14 @@
         <ul class="dropdown-menu">
           <li><a href="#">Log in with Facebook</a></li>
           <li><a href="#">Log in with Google</a></li>
-          <li role="separator" class="divider"></li>
           <li><a href="#"> Sign Up</a></li>
+          <li role="separator" class="divider"></li>
+            <% if (typeof currentUser === "object") { %>
+          <li><a href="#"> Log Out</a></li>
+            <% } %>
         </ul>
       </div> <!-- Closing Login Button -->
-      <li> Home </li>
+      <a class="homelink" href= "/"> Home</a>
     </ul>
   </div>
 

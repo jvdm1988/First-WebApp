@@ -1,13 +1,23 @@
-<h2> Miami Tech Workshops </h2>
+<div class="media1">
+  <div class="media-left media-middle">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"> Upcoming Workshops</h4>
+  </div>
+</div>
 
-<ul class="workshopList">
-  <% workshopsAndStuff.forEach((oneWorkshop) => { %>
-    <li>
-      <img src=" <%= oneWorkshop.photoUrl %> ">
-      <h3> <%= oneWorkshop.name %> </h3>
-      <p> <%= oneWorkshop.date %> </p>
-      <a href="/workshops/<%= oneWorkshop._id%>/details"> view details </a>
-      <br>
-    </li>
-    <% }) %>
-</ul>
+<% workshopsAndStuff.forEach((oneWorkshop) => { %>
+<div class="media eventList">
+  <div class="media-left media-middle">
+
+      <img class="media-object" src=" <%= oneWorkshop.photoUrl %>">
+    </a>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading"> <%= oneWorkshop.name %></h3>
+    <p> <i><%= prettyDate(oneWorkshop.date) %></i> </p>
+    <a href="/workshops/<%= oneWorkshop._id%>/details"> view details </a>
+  </div>
+
+</div>
+<%  }) %>

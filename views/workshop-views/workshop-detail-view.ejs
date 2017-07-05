@@ -1,13 +1,26 @@
-<h2> Workshop Details </h2>
+<div class="event-details-page">
+
+  <h2> Workshop Details </h2>
+
+<div class="details-box">
+<div class="details-content">
+<h3> <%= workshopDetails.name %> </h3>
+<hr>
+
+<p> <i> <%- pTagify(workshopDetails.description) %></i> </p>
+<hr>
+<p> <%= workshopDetails.description %> </p>
+</div>
+</div>
 
 
-
-
-
-
-
-<a href="/workshops/<%=workshopDetails._id%>/edit"> Edit Workshop </a>
+  <% if (typeof currentUser === "object") { %>
+<a class="edit-delete-link" href="/workshops/<%=workshopDetails._id%>/edit"> Edit Workshop </a>
 <br>
 
-<a href="/workshops/<%=workshopDetails._id%>/delete"> Delete Workshop </a>
+<a class="edit-delete-link" href="/workshops/<%=workshopDetails._id%>/delete"> Delete Workshop </a>
 <br>
+
+<% } %>
+
+</div>

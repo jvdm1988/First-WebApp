@@ -126,7 +126,7 @@ router.post("/workshops/:myId/update", (req, res, next) => {
 
 
 // ROUTE TO DELETE WORKSHOP VIEW ------------------------------------------
-router.post("/workshops/:myId/delete", (req, res, next) => {
+router.get("/workshops/:myId/delete", (req, res, next) => {
   WorkshopModel.findByIdAndRemove(
     req.params.myId,
     (err, workshopFromDb) => {
