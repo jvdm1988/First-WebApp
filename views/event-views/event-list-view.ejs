@@ -1,13 +1,22 @@
-<h2> Miami Tech Events </h2>
+<div class="media1">
+  <div class="media-left media-middle">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"> Upcoming Events</h4>
+  </div>
+</div>
 
-<ul class="eventList">
-  <% eventsAndStuff.forEach((oneEvent) => { %>
-    <li>
-      <img src=" <%= oneEvent.photoUrl %>">
-      <h3> <%= oneEvent.name %> </h3>
-      <p> <%= oneEvent.date %> </p>
-      <a href="/events/<%= oneEvent._id%>/details"> view details </a>
-      <br>
-    </li>
-  <%  }) %>
-</ul>
+
+<div class="media" "eventList">
+  <div class="media-left media-middle">
+    <% eventsAndStuff.forEach((oneEvent) => { %>
+      <img class="media-object" src=" <%= oneEvent.photoUrl %>">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"> <%= oneEvent.name %></h4>
+    <p> <%= oneEvent.date %> </p>
+    <a href="/events/<%= oneEvent._id%>/details"> view details </a>
+  </div>
+    <%  }) %>
+</div>

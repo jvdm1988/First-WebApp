@@ -6,9 +6,15 @@ const cookieParser = require('cookie-parser');
 const bodyParser   = require('body-parser');
 const layouts      = require('express-ejs-layouts');
 const mongoose     = require('mongoose');
+const session      = require("express-session");
+const passport     = require("passport");
+
 
 // import the "dotenv" package and load variables from the ".env" file
 require("dotenv").config();
+
+require("./config/passport-config.js");
+
 
 
 mongoose.connect(process.env.MONGODB_URI);
@@ -30,6 +36,18 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(layouts);
+app.use(session({
+  // The value of secret doesn't matter, but needs to be different for every app
+  secret: "blah blah",
+  resave: true,
+  saveUninitialized: true
+})); // 2 parentheses: 1 for use and 1 for session
+
+// After app.use(session…. - IMPORTANT!!!!!!
+app.use(passport.initialize());
+app.use(passport.session());
+
+
 
 // ROUTES --------------------------------------------------------
 
