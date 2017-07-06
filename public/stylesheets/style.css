@@ -1,7 +1,9 @@
-/* DEFAULT STYLING ----------------------------------------------------*/
+/* DEFAULT STYLING ---------------------------------------------------------*/
+
 html {
   height: 100%;
 }
+
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   /*background-image: url("/images/background1.jpg");*/
@@ -9,10 +11,13 @@ body {
   height: 100%;
   background-color: #f7f7f7;
 }
-/* END DEFAULT STYLING -----------------------------------------------*/
 
 
-/* OVERALL LAYOUT STYLING --------------------------------------------*/
+/* END DEFAULT STYLING -----------------------------------------------------*/
+
+
+/* OVERALL LAYOUT STYLING --------------------------------------------------*/
+
 .page-header {
   margin-top: -20px;
   height: 100px;
@@ -34,7 +39,6 @@ body {
   height: 38px;
   margin-top: -67px;
   margin-left: 59%;
-
 }
 
 .homelink {
@@ -48,7 +52,7 @@ body {
   color: #588466;
 }
 
-.navbar li:hover{
+.navbar li:hover {
   font-weight: bold;
   cursor: pointer;
 }
@@ -59,7 +63,12 @@ body {
   padding-left: 87px;
   margin-top: -65px;
 }
-/* HOMEPAGE STYLING --------------------------------------------------*/
+
+
+/* END OVERALL LAYOUT STYLING ----------------------------------------------*/
+
+
+/* HOMEPAGE STYLING --------------------------------------------------------*/
 
 .homebackground {
   height: 100%;
@@ -88,18 +97,18 @@ body {
   opacity: 0.9;
 }
 
-.homeevent{
+.homeevent {
   position: absolute;
   font-family: "Nothing You Could Do", cursive;
   display: inline-block;
   font-size: 68px;
   font-weight: bold;
   color: #588466;
-  margin-left: -25%;
-  margin-top: 33%;
+  margin-left: 19%;
+  margin-top: 35%;
 }
 
-.homeevent:hover{
+.homeevent:hover {
   color: #588466;
   text-decoration: none;
 }
@@ -130,11 +139,11 @@ body {
   font-weight: bold;
   margin-right: -300px;
   color: #588466;
-  margin-top: 33%;
-  margin-left: 220px;
+  margin-top: 35%;
+  margin-left: 780px;
 }
 
-.homeworkshop:hover{
+.homeworkshop:hover {
   color: #588466;
   text-decoration: none;
 }
@@ -144,9 +153,14 @@ body {
   height: 100%;
 }
 
-/* EVENT LIST VIEW STYLING ---------------------------------------*/
-.list-page {
-}
+
+/* END HOMEPAGE STYLING ----------------------------------------------------*/
+
+
+/* EVENT LIST VIEW STYLING -------------------------------------------------*/
+
+.list-page {}
+
 .media1 {
   height: 90px;
   background-color: #cee2da;
@@ -170,10 +184,11 @@ body {
   border-radius: 10px;
 }
 
-/* END EVENT LIST VIEW STYLING ---------------------------------------*/
+
+/* END EVENT LIST VIEW STYLING ---------------------------------------------*/
 
 
-/* EVENT & WORKSHOP DETAILS VIEW STYLING ------------------------------------*/
+/* EVENT & WORKSHOP DETAILS VIEW STYLING -----------------------------------*/
 
 .details-page {
   background-image: url("/images/background2.jpg");
@@ -202,13 +217,13 @@ body {
   height: 670px;
   border: 5px solid #588466;
   -moz-border-radius: 20px;
-    -khtml-border-radius: 20px;
-    -webkit-border-radius: 20px;
-    border-radius: 20px;
-    overflow:hidden;
-    -webkit-box-shadow:0 0 4em rgb(4,6,5);
-    -moz-box-shadow:0 0 3em rgb(6,7,8);
-    box-shadow:0 0 1em rgb(5,9,2);
+  -khtml-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 4em rgb(4, 6, 5);
+  -moz-box-shadow: 0 0 3em rgb(6, 7, 8);
+  box-shadow: 0 0 1em rgb(5, 9, 2);
   margin: 0 auto;
 }
 
@@ -260,10 +275,13 @@ body {
   margin-top: 20px;
   opacity: 0.9;
 }
-/* END EVENT & WORKSHOP DETAILS VIEW STYLING ------------------------------------*/
 
 
-/* NEW EVENT/WORKSHOP VIEW STYLING ---------------------------------------------------*/
+/* END EVENT & WORKSHOP DETAILS VIEW STYLING -------------------------------*/
+
+
+/* NEW EVENT/WORKSHOP VIEW STYLING -----------------------------------------*/
+
 .new-page {
   background-image: url("/images/tea.jpg");
   background-size: cover;
@@ -278,7 +296,6 @@ body {
   text-align: center;
   padding: 20px;
   background-color: #cee2da;
-  margin-top: -15px;
   margin-bottom: 40px;
 }
 
@@ -287,13 +304,13 @@ body {
   opacity: 0.9;
   border: 3px solid #588466;
   -moz-border-radius: 20px;
-    -khtml-border-radius: 20px;
-    -webkit-border-radius: 20px;
-    border-radius: 20px;
-    overflow:hidden;
-    -webkit-box-shadow:0 0 1em rgb(4,6,5);
-    -moz-box-shadow:0 0 1em rgb(6,7,8);
-    box-shadow:0 0 1em rgb(5,9,2);
+  -khtml-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 1em rgb(4, 6, 5);
+  -moz-box-shadow: 0 0 1em rgb(6, 7, 8);
+  box-shadow: 0 0 1em rgb(5, 9, 2);
   width: 550px;
   height: 500px;
   margin: 80px auto;
@@ -336,13 +353,13 @@ body {
   opacity: 0.9;
   border: 1px solid #588466;
   -moz-border-radius: 20px;
-    -khtml-border-radius: 20px;
-    -webkit-border-radius: 20px;
-    border-radius: 20px;
-    overflow:hidden;
-    -webkit-box-shadow:0 0 1em rgb(4,6,5);
-    -moz-box-shadow:0 0 1em rgb(6,7,8);
-    box-shadow:0 0 1em rgb(5,9,2);
+  -khtml-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 1em rgb(4, 6, 5);
+  -moz-box-shadow: 0 0 1em rgb(6, 7, 8);
+  box-shadow: 0 0 1em rgb(5, 9, 2);
   width: 550px;
   height: 500px;
   margin: 100px auto;
@@ -359,39 +376,78 @@ body {
   padding: 4px;
   width: 50%;
 }
+
+
 /* END NEW EVENT VIEW STYLING -------------------------------------------*/
 
 
 /* EDIT EVENT/WORKSHOP PAGE STYLING -------------------------------------*/
-.edit-page {
-  background-image: url("/images/bicycle.jpg");
-  background-size: cover;
-  /*background: linear-gradient(to bottom right, #cee2da, white);*/
-  height: 100%;
-}
 
-.edit-box {
-  background-color: white;
-  opacity: 0.9;
+
+
+/* END EDIT EVENT/WORKSHOP PAGE STYLING ---------------------------------*/
+
+
+/* LOGIN / SIGNUP PAGE STYLING ------------------------------------------*/
+
+.login-page {
   border: 1px solid #588466;
-  -moz-border-radius: 20px;
-    -khtml-border-radius: 20px;
-    -webkit-border-radius: 20px;
-    border-radius: 20px;
-    overflow:hidden;
-    -webkit-box-shadow:0 0 1em rgb(4,6,5);
-    -moz-box-shadow:0 0 1em rgb(6,7,8);
-    box-shadow:0 0 1em rgb(5,9,2);
-  width: 550px;
-  height: 500px;
-  margin: 80px auto;
+  border-radius: 7px;
+  width: 450px;
+  height: 450px;
+  margin: 0 auto;
   text-align: center;
-  font-size: 16px;
-  color: #545353;
-  padding: 20px;
+  margin-top: 100px;
+  margin-bottom: 300px;
+  background-color: #f4f4f4;
 }
 
-/* EDIT EVENT/WORKSHOP PAGE STYLING -------------------------------------*/
+.login-page button {
+background: #43a3e6;
+border: 1px solid #43a3e6;
+border-radius: 4px;
+color: #fff;
+cursor: pointer;
+display: inline-block;
+font-size: 14px;
+padding: 8px 16px;
+text-decoration: none;
+text-transform: uppercase;
+transition: .3s ease background;
+width: 50%;
+}
+
+.welcome-user {
+  list-style: none;
+  float: right;
+  background-color: white;
+  height: 27px;
+  margin-top: -20px;
+}
+.welcome-user2 {
+  list-style: none;
+  float: right;
+  background-color: white;
+  height: 27px;
+  margin-top: -20px;
+  
+
+}
+.welcome-user li {
+  float: right;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+
+.welcome-user a {
+  float: right;
+  margin-right: 30px;
+  margin-top: 5px;
+}
+/* END LOGIN / SIGNUP PAGE STYLING --------------------------------------*/
 
 
 /* FOOTER STYLING -------------------------------------------------------*/
+
+
+/* END FOOTER STYLING ---------------------------------------------------*/

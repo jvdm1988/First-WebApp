@@ -15,7 +15,7 @@ router.get("/signup", (req,res,next) => {
 router.post("/signup", (req, res, next) => {
   // If username or password is empty, show error message
   if(req.body.signupUsername === "" || req.body.signupPassword === "") {
-    res.locals.messageForDumbUsers = "Please provide both username and password";
+    res.locals.oopsMessage = "Please provide both username and password";
     res.render("auth-views/signup-view.ejs");
     return;
   }
@@ -27,7 +27,7 @@ router.post("/signup", (req, res, next) => {
     (err, userFromDb) => {
       if (userFromDb) {
         // If that's the case, display an error to the user
-        res.locals.messageForDumbUsers = "Sorry, but that username is taken.";
+        res.locals.oopsMessage = "Sorry, but that username is taken.";
 
         res.render("auth-views/signup-view.ejs");
         return;

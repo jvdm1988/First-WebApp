@@ -1,7 +1,8 @@
-<div class="edit-page">
+<div class="edit-box">
 <h2> Edit Event </h2>
 
-<div class="edit-box">
+<div class="login-page">
+  <br>
 <form method="post" action="/events/<%=eventDetails._id %>/update" enctype="multipart/form-data">
   <label for="event-category-input">  Category </label><br>
   <input id="event-category-input" type="text" name="eventCategory" value="<%= eventDetails.category %>">

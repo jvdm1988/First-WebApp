@@ -1,37 +1,54 @@
-<h2> Sign up </h2>
+<div class="signup-header">
+<h2> Sign up to become a member of Miami's thriving Tech Community </h2>
+<h3> and be able to add your own Events and Workshops!</h3>
+</div>
 
-<p> Sign up to this awesome app. </p>
-
+<div class="login-page signup-page">
+<h2> Sign Up </h2>
+<br>
 <!-- We use typeof here to avoid an error since the variable sometimes
     doesnt exist -->
-<% if (typeof messageForDumbUsers === "string") { %>
-  <p class="error-message"> <%= messageForDumbUsers%> </p>
+<% if (typeof oopsMessage === "string") { %>
+  <p class="error-message"> <%= oopsMessage%> </p>
 <% } %>
 
 
 <form id="form" method="post" action="/signup">
   <label for="full-name-input"> Your Name </label>
+  <br>
   <input  id="full-name-input" type="text" name="signupFullName"
      placeholder="Enter full name">
   <br>
 
   <label for="username-input"> Username </label>
+  <br>
   <input  id="username-input" type="text" name="signupUsername"
     placeholder="Enter Username">
     <br>
 
   <label for="password-input"> Password </label>
+  <br>
   <input  id="password-input" type="password" name="signupPassword"
     placeholder="********">
     <br>
     <br>
 
   <button>Sign Up </button>
-    <br>
 </form>
+<br>
+<br>
+<br>
+<br>
 
 <a href="/auth/facebook"> Log In with Facebook </a>
+<br>
 <br>
 
 <a href="/auth/google"> Log In with Google </a>
 <br>
+<br>
+
+<a href="/login"> Already a member? Log in<a>
+
+
+</div>

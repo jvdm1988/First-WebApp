@@ -1,7 +1,7 @@
 const Event = require ("../models/event-model.js");
 const Workshop = require ("../models/workshop-model.js");
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/miamitech");
+mongoose.connect(process.env.MONGODB_URI);
 
 // ARRAY OF EVENTS ----------------------------------------------------------
 

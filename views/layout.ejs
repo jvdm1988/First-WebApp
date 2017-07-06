@@ -21,26 +21,46 @@
     <ul class="navbar">
 
       <!-- Login button -->
+
+
       <div class="btn-group">
-        <button type="button" class="btn btn-danger">Log In </button>
-        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span class="caret"></span>
-          <span class="sr-only">Toggle Dropdown</span>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a href="#">Log in with Facebook</a></li>
-          <li><a href="#">Log in with Google</a></li>
-          <li><a href="#"> Sign Up</a></li>
-          <li role="separator" class="divider"></li>
-            <% if (typeof currentUser === "object") { %>
-          <li><a href="#"> Log Out</a></li>
-            <% } %>
-        </ul>
+        <% if (typeof currentUser === "object") { %>
+          <a href="/logout" class="btn btn-danger">Log Out</a>
+        <% } else { %>
+          <a href="/login" class="btn btn-danger">Log In</a>
+          <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="caret"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="/signup"> Sign Up</a></li>
+            <!-- <li role="separator" class="divider"></li> -->
+          </ul>
+        <% } %>
       </div> <!-- Closing Login Button -->
       <a class="homelink" href= "/"> Home</a>
-    </ul>
   </div>
 
+
+
+<%  if (typeof currentUser === "object") { %>
+<div class="welcome-user">
+  <ul class="media-list">
+    <div class="media-body">
+            <a href="/events/new"> | Add an Event |</a>
+            <a href="/workshops/new"> | Add a Workshop |</a>
+          <li class="media-heading">Welcome, <%=currentUser.username%>! </li>
+    </div>
+</ul>
+</div>
+  <%  } else { %>
+    <div class="welcome-user2">
+      <ul class="media-list">
+      
+    </ul>
+    </div>
+
+    <% } %>
 
 
   <%- body %>

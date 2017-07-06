@@ -36,6 +36,9 @@ app.locals.prettyDate =(myDate) => {
 };
 
 app.locals.pTagify = (myStr) => {
+  if (!myStr) {
+    return "";
+  }
   const listOfParagraphs = myStr.split('\n');
 
   const withPTags = listOfParagraphs.map((oneline) => {
@@ -63,12 +66,22 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-
+app.use((req, res, next) => {
+  // Check if the user IS logged in
+  if (req.user) {
+    res.locals.currentUser = req.user;
+  }
+  // If you dont type next(), your pages will load forever
+  next();
+});
 
 // ROUTES --------------------------------------------------------
 
 const index = require('./routes/index');
 app.use('/', index);
+
+const myAuthRoutes = require("./routes/auth-routes.js");
+app.use("/", myAuthRoutes);
 
 const myEventRoutes = require("./routes/event-routes.js");
 app.use("/", myEventRoutes);
