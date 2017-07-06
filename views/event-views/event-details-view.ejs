@@ -1,10 +1,11 @@
-<div class="event-details-page">
+<div class="details-page">
 
   <h2> Event Details </h2>
 
 <div class="details-box">
 <div class="details-content">
 <h3> <%= eventDetails.name %> </h3>
+<p> <%= eventDetails.location %> </p>
 <hr>
 
 <p> <i> <%= prettyDate(eventDetails.date) %></i> </p>
@@ -13,7 +14,7 @@
 </div>
 </div>
 
-<a class="edit-delete-link" href="/events/<%=eventDetails._id%>/edit"> Edit Event </a>
+<a class="event-edit-delete-link" href="/events/<%=eventDetails._id%>/edit"> Edit Event </a>
 <br>
 
 <!--  POST version -->
@@ -21,7 +22,7 @@
   <button> Delete Event </button>
 </form> -->
 
-<a class="edit-delete-link" href="/events/<%=eventDetails._id%>/delete"> Delete Event </a>
+<a class="event-edit-delete-link" href="/events/<%=eventDetails._id%>/delete"> Delete Event </a>
 <br>
 
 </div>

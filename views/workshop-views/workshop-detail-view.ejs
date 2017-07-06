@@ -1,26 +1,24 @@
-<div class="event-details-page">
+<div class="details-page">
 
   <h2> Workshop Details </h2>
 
 <div class="details-box">
 <div class="details-content">
 <h3> <%= workshopDetails.name %> </h3>
+<p> <%= workshopDetails.location %> </p>
 <hr>
 
-<p> <i> <%- pTagify(workshopDetails.description) %></i> </p>
+<p> <i> <%- prettyDate(workshopDetails.date) %></i> </p>
 <hr>
 <p> <%= workshopDetails.description %> </p>
 </div>
 </div>
 
 
-  <% if (typeof currentUser === "object") { %>
-<a class="edit-delete-link" href="/workshops/<%=workshopDetails._id%>/edit"> Edit Workshop </a>
+<a class="workshop-edit-delete-link" href="/workshops/<%=workshopDetails._id%>/edit"> Edit Workshop </a>
 <br>
 
-<a class="edit-delete-link" href="/workshops/<%=workshopDetails._id%>/delete"> Delete Workshop </a>
+<a class="workshop-edit-delete-link" href="/workshops/<%=workshopDetails._id%>/delete"> Delete Workshop </a>
 <br>
-
-<% } %>
 
 </div>

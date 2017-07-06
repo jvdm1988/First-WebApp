@@ -1,29 +1,39 @@
-<h2> Add a Workshop </h2>
+<div class="new-page">
+<h2> Create a Workshop </h2>
 
+<div class="create-workshop">
 <form method="post" action="/workshops">
-  <label for="workshop-category-input">  Category </label>
-  <input id="workshop-category-input" type="text" name="workshopCategory" value="<%= workshopDetails.category %>">
+  <!-- <label for="workshop-category-input">  Category </label><br>
+  <input id="workshop-category-input" type="text" name="workshopCategory">
+  <br>
+  <br> -->
+
+  <label for="workshop-name-input"> Name of Workshop </label><br>
+  <input id="workshop-name-input" type="text" step="0.10" name="workshopName">
+  <br>
   <br>
 
-  <label for="workshop-name-input"> Name of Workshop </label>
-  <input id="workshop-name-input" type="text" step="0.10" name="workshopName" value="<%= workshopDetails.name %>">
+  <label for="workshop-location-input"> Location </label><br>
+  <input id="workshop-location-input" type="text" name="workshopLocation">
+  <br>
   <br>
 
-  <label for="workshop-location-input"> Location </label>
-  <input id="workshop-location-input" type="text" name="workshopLocation" value="<%= workshopDetails.location %>">
+  <label for="workshop-date-input"> Date of Workshop </label><br>
+  <input id="workshop-date-input" name="workshopDate" type="date">
+  <br>
   <br>
 
-  <label for="workshop-date-input"> Date of Workshop </label>
-  <input id="workshop-date-input" name="workshopDate" type="date" value="<%= workshopDetails.date %>">
+  <label for="workshop-image-input"> Image Url </label><br>
+  <input id="workshop-image-input" name="workshopUrl" type="file">
+  <br>
   <br>
 
-  <label for="workshop-image-input"> Image Url </label>
-  <!-- <input id="workshop-image-input" name="workshopUrl" type="file" value="<%= workshopDetails.imageUrl %>"> -->
+  <label for="workshop-description-input"> Description </label><br>
+  <textarea id="workshop-description-input" name="workshopDescription"></textarea>
   <br>
-
-  <label for="workshop-description-input"> Description </label>
-  <textarea id="workshop-description-input" name="workshopDescription" value="<%= workshopDetails.description %>"</textarea>
   <br>
 
   <button> Save Your Workshop </button>
 </form>
+</div>
+</div>

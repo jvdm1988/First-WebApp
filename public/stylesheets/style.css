@@ -44,7 +44,7 @@ body {
   margin-top: -100px;
   margin-right: 120px;
   font-size: 20px;
-  /*font-weight: bold;*/
+  font-weight: bold;
   color: #588466;
 }
 
@@ -145,9 +145,10 @@ body {
 }
 
 /* EVENT LIST VIEW STYLING ---------------------------------------*/
-
+.list-page {
+}
 .media1 {
-  height: 60px;
+  height: 90px;
   background-color: #cee2da;
   margin-top: -15px;
 }
@@ -155,47 +156,40 @@ body {
 .media1 h4 {
   text-align: center;
   padding: 15px;
-  font-size: 30px;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "Nothing You Could Do", cursive;
+  color: #588466;
 }
 
 .media {
-  width: 100%;
+  width: 96%;
   height: 200px;
-  margin: 30px;
+  margin: 20px;
+  border: 3px solid #cee2da;
+  border-radius: 10px;
 }
-/*
-.media img{
-  height: 120px;
-  width: 120px;
-}*/
+
+/* END EVENT LIST VIEW STYLING ---------------------------------------*/
+
 
 /* EVENT & WORKSHOP DETAILS VIEW STYLING ------------------------------------*/
 
-.event-details-page {
+.details-page {
   background-image: url("/images/background2.jpg");
-  font-family: "Nothing You Could Do", cursive;
-  color: #588466;
-  font-weight: bold;
-  font-size: 50px;
   height: 100%;
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
-  text-align: center;
-  padding-top: 70px;
 }
 
-.edit-delete-link {
-  text-align: center;
-  border: 1px solid #588466;
-  border-radius: 70px;
-  padding: 20px;
-  width: 210px;
-  font-size: 22px;
-  display: inline-block;
-  background-color: white;
+.details-page h2 {
+  font-family: "Nothing You Could Do", cursive;
   color: #588466;
-  margin-left: 570px;
+  font-weight: bold;
+  font-size: 64px;
+  text-align: center;
+  padding: 60px;
 }
 
 .details-box {
@@ -205,8 +199,7 @@ body {
   background-color: #77a894;
   opacity: 0.9;
   width: 800px;
-  height: 650px;
-  text-align: center;
+  height: 670px;
   border: 5px solid #588466;
   -moz-border-radius: 20px;
     -khtml-border-radius: 20px;
@@ -220,15 +213,16 @@ body {
 }
 
 .details-content {
-  width: 600px;
+  width: 620px;
   margin: 0 auto;
   font-family: "Raleway";
   font-size: 24px;
   color: black;
+  overflow: scroll;
 }
 
 .details-content h3 {
-  font-size: 34px;
+  font-size: 36px;
   font-weight: bold;
 }
 
@@ -237,7 +231,167 @@ body {
   width: 250px;
 }
 
+.event-edit-delete-link {
+  text-align: center;
+  border: 1px solid #588466;
+  border-radius: 70px;
+  padding: 15px;
+  width: 200px;
+  font-size: 22px;
+  display: inline-block;
+  background-color: #fcfcfc;
+  color: #d84629;
+  margin-left: 540px;
+  margin-top: 20px;
+  opacity: 0.9;
+}
+
+.workshop-edit-delete-link {
+  text-align: center;
+  border: 1px solid #588466;
+  border-radius: 70px;
+  padding: 15px;
+  width: 250px;
+  font-size: 22px;
+  display: inline-block;
+  background-color: #fcfcfc;
+  color: #d84629;
+  margin-left: 520px;
+  margin-top: 20px;
+  opacity: 0.9;
+}
 /* END EVENT & WORKSHOP DETAILS VIEW STYLING ------------------------------------*/
+
+
+/* NEW EVENT/WORKSHOP VIEW STYLING ---------------------------------------------------*/
+.new-page {
+  background-image: url("/images/tea.jpg");
+  background-size: cover;
+  height: 100%;
+}
+
+.new-page h2 {
+  font-family: "Nothing You Could Do", cursive;
+  color: #588466;
+  font-weight: bold;
+  font-size: 52px;
+  text-align: center;
+  padding: 20px;
+  background-color: #cee2da;
+  margin-top: -15px;
+  margin-bottom: 40px;
+}
+
+.create-event {
+  background-color: white;
+  opacity: 0.9;
+  border: 3px solid #588466;
+  -moz-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    overflow:hidden;
+    -webkit-box-shadow:0 0 1em rgb(4,6,5);
+    -moz-box-shadow:0 0 1em rgb(6,7,8);
+    box-shadow:0 0 1em rgb(5,9,2);
+  width: 550px;
+  height: 500px;
+  margin: 80px auto;
+  text-align: center;
+  font-size: 16px;
+  color: #545353;
+  padding: 20px;
+}
+
+.create-event label {
+  font-size: 14px;
+}
+
+.create-event input textarea {
+  box-sizing: border-box;
+  font-size: 14px;
+  outline: 0;
+  padding: 4px;
+}
+
+.savebutton {
+  text-align: center;
+  border: 1px solid #588466;
+  border-radius: 70px;
+  padding: 5px;
+  width: 140px;
+  font-size: 14px;
+  display: inline-block;
+  background-color: #fcfcfc;
+  color: #d84629;
+  opacity: 0.9;
+}
+
+.savebutton:hover {
+  background-color: #e2e2e2;
+}
+
+.create-workshop {
+  background-color: white;
+  opacity: 0.9;
+  border: 1px solid #588466;
+  -moz-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    overflow:hidden;
+    -webkit-box-shadow:0 0 1em rgb(4,6,5);
+    -moz-box-shadow:0 0 1em rgb(6,7,8);
+    box-shadow:0 0 1em rgb(5,9,2);
+  width: 550px;
+  height: 500px;
+  margin: 100px auto;
+  text-align: center;
+  font-size: 16px;
+  color: #545353;
+  padding: 20px;
+}
+
+.create-workshop input textarea {
+  box-sizing: border-box;
+  font-size: 14px;
+  outline: 0;
+  padding: 4px;
+  width: 50%;
+}
+/* END NEW EVENT VIEW STYLING -------------------------------------------*/
+
+
+/* EDIT EVENT/WORKSHOP PAGE STYLING -------------------------------------*/
+.edit-page {
+  background-image: url("/images/bicycle.jpg");
+  background-size: cover;
+  /*background: linear-gradient(to bottom right, #cee2da, white);*/
+  height: 100%;
+}
+
+.edit-box {
+  background-color: white;
+  opacity: 0.9;
+  border: 1px solid #588466;
+  -moz-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    overflow:hidden;
+    -webkit-box-shadow:0 0 1em rgb(4,6,5);
+    -moz-box-shadow:0 0 1em rgb(6,7,8);
+    box-shadow:0 0 1em rgb(5,9,2);
+  width: 550px;
+  height: 500px;
+  margin: 80px auto;
+  text-align: center;
+  font-size: 16px;
+  color: #545353;
+  padding: 20px;
+}
+
+/* EDIT EVENT/WORKSHOP PAGE STYLING -------------------------------------*/
 
 
 /* FOOTER STYLING -------------------------------------------------------*/

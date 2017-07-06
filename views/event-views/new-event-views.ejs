@@ -1,29 +1,39 @@
-<h2> Add an Event </h2>
+<div class="new-page">
+<h2> Create an Event </h2>
 
+<div class="create-event">
 <form method="post" action="/events" >
-  <label for="event-category-input">  Category </label>
+  <!-- <label for="event-category-input">  Category </label>
   <input id="event-category-input" type="text" name="eventCategory">
-  <br>
+  <br> -->
 
-  <label for="event-name-input"> Name of Event </label>
+  <label for="event-name-input"> Name of Event </label><br>
   <input id="event-name-input" type="text" step="0.10" name="eventName">
   <br>
+  <br>
 
-  <label for="event-location-input"> Location </label>
+  <label for="event-location-input"> Location </label><br>
   <input id="event-location-input" type="text" name="eventLocation">
   <br>
+  <br>
 
-  <label for="event-date-input"> Date of Event </label>
+  <label for="event-date-input"> Date of Event </label><br>
   <input id="event-date-input" type="date" name="eventDate">
   <br>
-
-  <label for="event-image-input"> Image Url </label>
-  <!-- <input id="event-image-input" name="eventUrl" type="file"> -->
   <br>
 
-  <label for="event-description-input"> Description </label>
+  <label for="event-image-input"> Image Url </label><br>
+  <input id="event-image-input" name="eventUrl" type="file">
+  <br>
+  <br>
+
+  <label for="event-description-input"> Description </label><br>
   <textarea id="event-description-input" name="eventDescription"></textarea>
   <br>
+  <br>
+  <br>
 
-  <button> Save Your Event </button>
+  <button class="savebutton"> Save Your Event </button>
 </form>
+</div>
+</div>
