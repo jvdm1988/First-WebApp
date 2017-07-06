@@ -1,13 +1,14 @@
+<div class="textured">
 <div class="edit-box">
 <h2> Edit Event </h2>
 
 <div class="login-page">
   <br>
 <form method="post" action="/events/<%=eventDetails._id %>/update" enctype="multipart/form-data">
-  <label for="event-category-input">  Category </label><br>
+  <!-- <label for="event-category-input">  Category </label><br>
   <input id="event-category-input" type="text" name="eventCategory" value="<%= eventDetails.category %>">
   <br>
-  <br>
+  <br> -->
 
   <label for="event-name-input"> Name of Event </label><br>
   <input id="event-name-input" type="text" step="0.10" name="eventName" value="<%= eventDetails.name %>">
@@ -36,5 +37,6 @@
 
   <button class="savebutton"> Save Your Changes </button>
 </form>
+</div>
 </div>
 </div>

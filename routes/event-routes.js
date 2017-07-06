@@ -7,15 +7,18 @@ const router = express.Router();
 
 // ROUTE TO EVENTS LIST VIEW --------------------------------------------
 router.get("/events", (req, res, next) => {
-  EventModel.find((err, EventResults) => {
-    if (err) {
-      next(err);
-      return;
-    }
-    res.render("event-views/event-list-view.ejs", {
-      eventsAndStuff : EventResults
+  EventModel
+    .find()
+    .sort({ date: 1 })
+    .exec((err, EventResults) => {
+      if (err) {
+        next(err);
+        return;
+      }
+      res.render("event-views/event-list-view.ejs", {
+        eventsAndStuff : EventResults
+      });
     });
-  });
 });
 // END ROUTE TO EVENTS LIST VIEW ----------------------------------------
 
@@ -40,7 +43,7 @@ router.get("/events/:eventId/details", (req, res, next) => {
 const multer = require("multer");
 const myUploader = multer({
   // "dest" (destination) is a multer setting to specify where to upload files
-  dest: __dirname + "../public/uploads/"
+  dest: __dirname + "/../public/uploads/"
   // save uploaded files inside public/uploads/
 });
 
@@ -52,15 +55,17 @@ router.get("/events/new", (req, res, next) => {
 });
 
 // STEP #2 of form submission for a new event-views
-router.post("/events", (req, res, next) => {
+router.post("/events", myUploader.single('eventPhoto'), (req, res, next) => {
+  // console.log("----------------------------" + req.body.eventPhoto);
   const theEvent = new EventModel({
     category: req.body.eventCategory,
     name: req.body.eventName,
     location: req.body.eventLocation,
     date: req.body.eventDate,
-    // photoUrl: req.body.eventPhotoUrl,
+     photoUrl: '/uploads/' + req.file.filename,
     description: req.body.eventDescription
   });
+
 
   theEvent.save((err) => {
     // If there are errors that are NOT validation errors

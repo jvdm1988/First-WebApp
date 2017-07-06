@@ -7,7 +7,10 @@ const router = express.Router();
 
 // ROUTE TO WORKSHOP LIST VIEW --------------------------------------------
 router.get("/workshops", (req, res, next) => {
-  WorkshopModel.find((err, WorkshopResults) => {
+  WorkshopModel
+    .find()
+    .sort ({ Date: 1 })
+    .exec((err, WorkshopResults) => {
     if (err) {
       next(err);
       return;

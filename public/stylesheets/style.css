@@ -52,9 +52,14 @@ body {
   color: #588466;
 }
 
+.navbar {
+  z-index: 3;
+}
+
 .navbar li:hover {
   font-weight: bold;
   cursor: pointer;
+  z-index: 4;
 }
 
 .btn-group {
@@ -148,12 +153,6 @@ body {
   text-decoration: none;
 }
 
-.event-details-page {
-  background-color: #eff2f1;
-  height: 100%;
-}
-
-
 /* END HOMEPAGE STYLING ----------------------------------------------------*/
 
 
@@ -189,6 +188,11 @@ body {
 
 
 /* EVENT & WORKSHOP DETAILS VIEW STYLING -----------------------------------*/
+
+.event-details-page {
+  background-color: #eff2f1;
+  height: 100%;
+}
 
 .details-page {
   background-image: url("/images/background2.jpg");
@@ -249,31 +253,40 @@ body {
 .event-edit-delete-link {
   text-align: center;
   border: 1px solid #588466;
-  border-radius: 70px;
+  border-radius: 50px;
   padding: 15px;
   width: 200px;
   font-size: 22px;
-  display: inline-block;
+  display: inline;
   background-color: #fcfcfc;
   color: #d84629;
-  margin-left: 540px;
-  margin-top: 20px;
+  margin: 20px;
   opacity: 0.9;
+}
+
+.edit-link {
+  margin-left: 450px;
+  margin-top: 60px;
 }
 
 .workshop-edit-delete-link {
   text-align: center;
   border: 1px solid #588466;
-  border-radius: 70px;
+  border-radius: 50px;
   padding: 15px;
   width: 250px;
   font-size: 22px;
-  display: inline-block;
+  display: inline;
   background-color: #fcfcfc;
   color: #d84629;
-  margin-left: 520px;
-  margin-top: 20px;
+  margin: 20px;
+  margin-right: 20px;
   opacity: 0.9;
+}
+
+.edit-workshop-link {
+  margin-left: 410px;
+  margin-top: 60px;
 }
 
 
@@ -390,6 +403,10 @@ body {
 
 /* LOGIN / SIGNUP PAGE STYLING ------------------------------------------*/
 
+.textured {
+  background-image: url("/images/cubes.png");
+}
+
 .login-page {
   border: 1px solid #588466;
   border-radius: 7px;
@@ -397,13 +414,13 @@ body {
   height: 450px;
   margin: 0 auto;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 200px;
   margin-bottom: 300px;
   background-color: #f4f4f4;
 }
 
 .login-page button {
-background: #43a3e6;
+background: #588466;
 border: 1px solid #43a3e6;
 border-radius: 4px;
 color: #fff;
@@ -417,37 +434,47 @@ transition: .3s ease background;
 width: 50%;
 }
 
+.btn-group {
+  z-index: 1;
+}
+
 .welcome-user {
   list-style: none;
   float: right;
   background-color: white;
-  height: 27px;
+  height: 30px;
   margin-top: -20px;
+  z-index: 5;
+  position: relative;
 }
 .welcome-user2 {
   list-style: none;
   float: right;
   background-color: white;
-  height: 27px;
+  height: 30px;
   margin-top: -20px;
-  
+
 
 }
 .welcome-user li {
   float: right;
   margin-right: 20px;
-  margin-top: 5px;
+  margin-top: 7px;
 }
 
 .welcome-user a {
   float: right;
   margin-right: 30px;
-  margin-top: 5px;
+  margin-top: 7px;
+  z-index: 6;
+  position: relative;
 }
 /* END LOGIN / SIGNUP PAGE STYLING --------------------------------------*/
 
 
 /* FOOTER STYLING -------------------------------------------------------*/
-
+footer {
+  margin-top: 10px;
+}
 
 /* END FOOTER STYLING ---------------------------------------------------*/
