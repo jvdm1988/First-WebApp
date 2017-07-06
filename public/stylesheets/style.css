@@ -395,7 +395,26 @@ body {
 
 
 /* EDIT EVENT/WORKSHOP PAGE STYLING -------------------------------------*/
+.edit-box h2 {
+  font-size: 48px;
+  font-weight: bold;
+  font-family: "Nothing You Could Do", cursive;
+  color: #588466;
+  text-align: center;
+  padding: 50px;
+}
 
+.edit-sub-box {
+  border: 1px solid #588466;
+  border-radius: 7px;
+  width: 450px;
+  height: 450px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 200px;
+  background-color: #f4f4f4;
+}
 
 
 /* END EDIT EVENT/WORKSHOP PAGE STYLING ---------------------------------*/
@@ -431,7 +450,7 @@ padding: 8px 16px;
 text-decoration: none;
 text-transform: uppercase;
 transition: .3s ease background;
-width: 50%;
+width: 150px;
 }
 
 .btn-group {
@@ -468,6 +487,14 @@ width: 50%;
   margin-top: 7px;
   z-index: 6;
   position: relative;
+}
+
+.signup-header {
+  font-family: "Nothing You Could Do", cursive;
+  color: #588466;
+  font-size: 58px;
+  font-weight: bold;
+  text-align: center;
 }
 /* END LOGIN / SIGNUP PAGE STYLING --------------------------------------*/
 
