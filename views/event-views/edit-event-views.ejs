@@ -1,4 +1,3 @@
-<div class="textured">
 <div class="edit-box">
 <h2> Edit Event </h2>
 
@@ -24,19 +23,18 @@
   <input id="event-date-input" name="eventDate" type="date" value="<%= eventDetails.date %>">
   <br>
   <br>
-
+<!-- 
   <label for="event-image-input"> Image Url </label><br>
-  <input id="event-image-input" name="eventUrl" type="file" value="<%= eventDetails.imageUrl %>">
+  <input id="event-image-input" name="eventUrl" type="file">
   <br>
-  <br>
+  <br> -->
 
   <label for="event-description-input"> Description </label><br>
-  <textarea id="event-description-input" name="eventDescription" value="<%= eventDetails.description %>"></textarea>
+  <textarea id="event-description-input" name="eventDescription"><%= eventDetails.description %></textarea>
   <br>
   <br>
 
   <button class="savebutton"> Save Your Changes </button>
 </form>
-</div>
 </div>
 </div>

@@ -1,6 +1,7 @@
 const express = require("express");
 
 const EventModel = require("../models/event-model.js");
+const WorkshopModel = require("../models/workshop-model.js");
 
 const router = express.Router();
 
@@ -104,16 +105,16 @@ router.get("/events/:myId/edit", (req, res, next) => {
   );
 });
 
-// STEP #2 of form submissionediting an Event
-router.post("/events/:myId/update", (req, res, next) => {
+// STEP #2 of form submission editing an Event
+router.post("/events/:myId/update", myUploader.single('eventUrl'), (req, res, next) => {
   EventModel.findByIdAndUpdate(
     req.params.myId, //1st arg -> id of document to update
-    { //2nd arg -> object of fields to update
+    {//2nd arg -> object of fields to update
       category: req.body.eventCategory,
       name: req.body.eventName,
       location: req.body.eventLocation,
       date: req.body.eventDate,
-      photoUrl: req.body.eventPhotoUrl,
+      // photoUrl: req.body.eventPhotoUrl,
       description: req.body.eventDescription
     },
     (err, eventFromDb) => { //3rd arg -> callback
@@ -121,7 +122,7 @@ router.post("/events/:myId/update", (req, res, next) => {
         next(err);
         return;
       }
-      res.redirect("/events/" + eventFromDb._id);
+      res.redirect("/events/" + eventFromDb._id  + "/details/");
     }
   );
 });
@@ -144,6 +145,38 @@ router.get("/events/:myId/delete", (req, res, next) => {
 });
 // END ROUTE TO DELETE EVENT VIEW --------------------------------------
 
+// localhost:3000/results?search=club
+ // SEARCH ROUTE -------------------------------------------------------
+router.get("/results", (req, res, next) => {
+  const search = req.query.search;
+  const queryRegex = new RegExp(search, 'ig');
 
+
+  EventModel.find(
+    // req.query.search
+    {name: queryRegex},
+    (err, EventResults) => {
+      if (err) {
+        next(err);
+        return;
+      }
+
+      WorkshopModel.find(
+        // req.query.search
+        {name: queryRegex},
+        (err, WorkshopResults) => {
+          if (err) {
+            next(err);
+            return;
+          }
+
+      res.render("event-views/eventresult-view.ejs",
+      {eventsAndStuff: EventResults,
+      workshopsAndStuff: WorkshopResults});
+    });
+});
+
+});
+// END SEARCH ROUTE ---------------------------------------------------
 
 module.exports = router;

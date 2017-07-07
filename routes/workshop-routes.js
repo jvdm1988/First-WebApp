@@ -9,7 +9,7 @@ const router = express.Router();
 router.get("/workshops", (req, res, next) => {
   WorkshopModel
     .find()
-    .sort ({ Date: 1 })
+    .sort({ date: 1 })
     .exec((err, WorkshopResults) => {
     if (err) {
       next(err);
@@ -104,7 +104,7 @@ router.get("/workshops/:myId/edit", (req, res, next) => {
 });
 
 // STEP #2 of form submission editing an Workshop
-router.post("/workshops/:myId/update", (req, res, next) => {
+router.post("/workshops/:myId/update", myUploader.single('workshopUrl'),  (req, res, next) => {
   WorkshopModel.findByIdAndUpdate(
     req.params.myId, //1st arg -> id of document to update
     { //2nd arg -> object of fields to update
@@ -112,7 +112,7 @@ router.post("/workshops/:myId/update", (req, res, next) => {
       name: req.body.workshopName,
       location: req.body.workshopLocation,
       date: req.body.workshopDate,
-      photoUrl: req.body.workshopPhotoUrl,
+      // photoUrl: req.body.workshopPhotoUrl,
       description: req.body.workshopDescription
     },
     (err, workshopFromDb) => { //3rd arg -> callback
@@ -120,7 +120,7 @@ router.post("/workshops/:myId/update", (req, res, next) => {
         next(err);
         return;
       }
-      res.redirect("/workshops/" + workshopFromDb._id);
+      res.redirect("/workshops/" + workshopFromDb._id + "/details/");
     }
   );
 });
@@ -142,6 +142,5 @@ router.get("/workshops/:myId/delete", (req, res, next) => {
   );
 });
 // END ROUTE TO DELETE WORKSHOP VIEW --------------------------------------
-
 
 module.exports = router;

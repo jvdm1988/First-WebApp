@@ -15,9 +15,9 @@
       <img class="media-object" src=" <%= oneEvent.photoUrl %>">
     </a>
   </div>
-  <div class="media-body">
-    <h3 class="media-heading"> <%= oneEvent.name %></h3>
-    <p> <i><%= prettyDate(oneEvent.date) %></i> </p>
+  <div class="media-body"><br>
+    <h3 class="media-heading"> <%= oneEvent.name %></h3><br>
+    <p> <i><%= prettyDate(oneEvent.date) %></i> </p><br>
     <a href="/events/<%= oneEvent._id%>/details"> view details </a>
   </div>
 

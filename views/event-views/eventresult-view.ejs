@@ -1,0 +1,49 @@
+
+<% if (eventsAndStuff.length === 0) { %>
+  <br>
+ <p class="no-results"> There are no - <strong><i>Events</i></strong> - that match your results</p>
+ <hr>
+ <br>
+ <% } else { %>
+<% eventsAndStuff.forEach((oneEvent) => { %>
+  <br>
+  <p class="yes-results">Your - <strong><i>Events</i></strong> - results:</p>
+  <div class="media eventList">
+    <div class="media-left media-middle">
+        <img class="media-object" src=" <%= oneEvent.photoUrl %>">
+      </a>
+    </div>
+    <div class="media-body"><br>
+      <h3 class="media-heading"> <%= oneEvent.name %></h3><br>
+      <p> <i><%= prettyDate(oneEvent.date) %></i> </p><br>
+      <a href="/events/<%= oneEvent._id%>/details"> view details </a>
+    </div>
+
+    </div>
+    <%  }) %>
+  <%  } %>
+
+
+  <% if ( workshopsAndStuff.length === 0) { %>
+    <br>
+   <p class="no-results"> There are no - <strong><i>Workshops</i></strong> - that match your result</p>
+   <hr>
+   <br>
+   <% } else { %>
+  <% workshopsAndStuff.forEach((oneWorkshop) => { %>
+    <br>
+    <p class="yes-results">Your - <strong><i>Workshop</i></strong> - results:</p>
+    <div class="media eventList">
+      <div class="media-left media-middle">
+          <img class="media-object" src=" <%= oneWorkshop.photoUrl %>">
+        </a>
+      </div>
+      <div class="media-body"><br>
+        <h3 class="media-heading"> <%= oneWorkshop.name %></h3><br>
+        <p> <i><%= prettyDate(oneWorkshop.date) %></i> </p><br>
+        <a href="/workshops/<%= oneWorkshop._id%>/details"> view details </a>
+      </div>
+
+      </div>
+      <%  }) %>
+    <%  } %>

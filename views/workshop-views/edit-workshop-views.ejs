@@ -1,8 +1,8 @@
-<div class="textured">
 <div class="edit-box">
 <h2> Edit Workshop </h2>
 
 <div class="edit-sub-box">
+  <br>
 <form method="post" action="/workshops/<%=workshopDetails._id %>/update" enctype="multipart/form-data">
   <!-- <label for="workshop-category-input">  Category </label><br>
   <input id="workshop-category-input" type="text" name="workshopCategory">
@@ -10,32 +10,31 @@
   <br> -->
 
   <label for="workshop-name-input"> Name of Workshop </label><br>
-  <input id="workshop-name-input" type="text" step="0.10" name="workshopName">
+  <input id="workshop-name-input" type="text" step="0.10" name="workshopName" value="<%= workshopDetails.name %>">
   <br>
   <br>
 
   <label for="workshop-location-input"> Location </label><br>
-  <input id="workshop-location-input" type="text" name="workshopLocation">
+  <input id="workshop-location-input" type="text" name="workshopLocation" value="<%= workshopDetails.location %>">
   <br>
   <br>
 
   <label for="workshop-date-input"> Date of Workshop </label><br>
-  <input id="workshop-date-input" name="workshopDate" type="date">
+  <input id="workshop-date-input" name="workshopDate" type="date" value="<%= workshopDetails.date %>">
   <br>
   <br>
 
-  <label for="workshop-image-input"> Image Url </label><br>
+  <!-- <label for="workshop-image-input"> Image Url </label><br>
   <input id="workshop-image-input" name="workshopUrl" type="file">
   <br>
-  <br>
+  <br> -->
 
   <label for="workshop-description-input"> Description </label><br>
-  <textarea id="workshop-description-input" name="workshopDescription"></textarea>
+  <textarea id="workshop-description-input" name="workshopDescription"><%= workshopDetails.description %></textarea>
   <br>
   <br>
 
   <button class="savebutton"> Save Your Changes </button>
 </form>
-</div>
 </div>
 </div>

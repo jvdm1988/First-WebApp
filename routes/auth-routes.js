@@ -27,7 +27,7 @@ router.post("/signup", (req, res, next) => {
     (err, userFromDb) => {
       if (userFromDb) {
         // If that's the case, display an error to the user
-        res.locals.oopsMessage = "Sorry, but that username is taken.";
+        res.locals.oopsMessage = "Sorry, that user name is taken.";
 
         res.render("auth-views/signup-view.ejs");
         return;
@@ -68,7 +68,9 @@ router.get("/login", (req, res, next) => {
   }
   // If not logged in, show the log in page
   else {
+  res.locals.oopsMessage = "Please, try again.";
   res.render("auth-views/login-view.ejs");
+
 }
 });
 
